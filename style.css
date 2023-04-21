@@ -1,8 +1,6 @@
 body {
     margin: 0%;
     padding: 0%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -12,31 +10,31 @@ div #icon {
     background-color: white;
     width: 50%;
     height: 30%;
-    box-shadow: 0 0 20px 0 #00ff40;
+    box-shadow: 0 0 2vh 0 #00ff40;
 }
 div #card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-sizing: border-box;
 }
 
 #card {
     background-color: black;
-    width: 200px;
-    height: 300px;
+    margin-right: 3vh;
+    width: 15vh;
+    height: 25vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 900;
-    border: solid 7px #E8B34B;
-    border-radius: 10px;
+    font-weight: 700;
+    font-size: 80%;
+    border: solid 1vh #E8B34B;
+    border-radius: 2vh;
     text-align: center;
     color: white;
-    box-shadow: 0 0 20px 0 #00ff40;
+    box-shadow: 0 0 2vh 0 #00ff40;
 }
 
 ul {
     list-style: none;
 }
-
 

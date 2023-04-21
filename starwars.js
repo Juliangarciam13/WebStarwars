@@ -21,17 +21,17 @@ const datesPeople = async () => {
     }
 }
 
-const card = async (newArrayPeople) => {
+const card = async (person) => {
     try {
         const dataCard = await fetch('./characters.html');
         const cardHtml = await dataCard.text();
-        let cardHtmlContent = cardHtml;
-        cardHtmlContent = cardHtmlContent.replace('{{name}}', newArrayPeople[0].name);
-        cardHtmlContent = cardHtmlContent.replace('{{eye_color}}', newArrayPeople[0]['eye_color']);
-        cardHtmlContent = cardHtmlContent.replace('{{hair_color}}', newArrayPeople[0]['hair_color']);
-        cardHtmlContent = cardHtmlContent.replace('{{height}}', newArrayPeople[0].height);
-        cardHtmlContent = cardHtmlContent.replace('{{gender}}', newArrayPeople[0].gender);
-        cardHtmlContent = cardHtmlContent.replace('{{birth_year}}', newArrayPeople[0]['birth_year']);
+        let cardHtmlContent = cardHtml
+        .replace('{{name}}', person.name)
+        .replace('{{eye_color}}', person['eye_color'])
+        .replace('{{hair_color}}', person['hair_color'])
+        .replace('{{height}}', person.height)
+        .replace('{{gender}}', person.gender)
+        .replace('{{birth_year}}', person['birth_year']);
         return cardHtmlContent;
     } catch (error) {
         console.error(error)
@@ -39,11 +39,13 @@ const card = async (newArrayPeople) => {
 }
 
 datesPeople().then((newArrayPeople) => {
-    const newDiv = document.createElement('div');
-    card(newArrayPeople).then((returnCard) => {
-        newDiv.innerHTML = returnCard;
+    const cardPromises = newArrayPeople.map(person => card(person));
+    Promise.all(cardPromises).then((cards) => {
         const parent = document.getElementById('container');
-        parent.appendChild(newDiv);
+        cards.forEach((card) => {
+            const newDiv = document.createElement('div');
+            newDiv.innerHTML = card;
+            parent.appendChild(newDiv);
+        });
     });
 });
-
