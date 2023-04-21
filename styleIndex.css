@@ -1,0 +1,27 @@
+body {
+    background-image: url(./Imgs/backgroundStarwars.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
