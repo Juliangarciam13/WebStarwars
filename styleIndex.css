@@ -66,9 +66,10 @@ body::-webkit-scrollbar-track {
 .myButtonLeft {
     width: 5vh;
     height: 5vh;
+    background-color: #E8B34B;
     background-image: url('./Imgs/imgLeft.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
     border: none;
     border-radius: 1vh;
     cursor: pointer;
@@ -78,11 +79,20 @@ body::-webkit-scrollbar-track {
 .myButtonRight {
     width: 5vh;
     height: 5vh;
+    background-color: #E8B34B;
     background-image: url('./Imgs/imgRight.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
     border: none;
     border-radius: 1vh;
     cursor: pointer;
     margin-left: 1vh;
+}
+
+.myButtonLeft:hover {
+    background-color: #00ff40;
+}
+
+.myButtonRight:hover {
+    background-color: #00ff40;
 }

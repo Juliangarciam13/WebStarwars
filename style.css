@@ -22,14 +22,14 @@ div #card {
 #card {
     background-color: black;
     margin-right: 3vh;
-    width: 15vh;
-    height: 25vh;
+    width: 20vh;
+    height: 30vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
-    font-size: 80%;
+    font-size: 100%;
     border: solid 1vh #E8B34B;
     border-radius: 2vh;
-    text-align: center;
+    text-align:center;
     color: white;
     box-shadow: 0 0 2vh 0 #00ff40;
 }
@@ -37,4 +37,3 @@ div #card {
 ul {
     list-style: none;
 }
-
