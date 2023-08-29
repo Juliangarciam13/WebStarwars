@@ -3,14 +3,18 @@
 
 <head>
     <title>Starwars</title>
-    <link rel="stylesheet" href="styleIndex.css">
-    <script type="module" src="./starwars.js" defer></script>
+    <link rel="stylesheet" href="../Styles/styleIndex.css">
+    <script type="module" src="../Scripts/starwars.js" defer></script>
 </head>
 
 <body>
+    <div id="loader">
+        <div class="loader-icon"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
     <div class="videoContainer">
         <video autoplay muted loop>
-            <source src="./Imgs/Space.mp4" type="video/mp4">
+            <source src="../Imgs/Space.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>

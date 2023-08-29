@@ -1,8 +1,12 @@
 body {
     margin: 0%;
     padding: 0%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+img {
+    width: 5vw;
 }
 
 div #icon {
@@ -12,6 +16,7 @@ div #icon {
     height: 30%;
     box-shadow: 0 0 2vh 0 #00ff40;
 }
+
 div #card {
     display: flex;
     flex-direction: column;
@@ -22,18 +27,45 @@ div #card {
 #card {
     background-color: black;
     margin-right: 3vh;
-    width: 20vh;
+    width: 22vh;
     height: 30vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
-    font-size: 100%;
+    font-size: 120%;
     border: solid 1vh #E8B34B;
     border-radius: 2vh;
-    text-align:center;
+    text-align: center;
     color: white;
     box-shadow: 0 0 2vh 0 #00ff40;
 }
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5vh 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        font-size: xx-large;
+    }
+
+    #card {
+        width: 50vw;
+        height: 60vh;
+        font-size: 100%;
+        margin-bottom: 5vh;
+    }
+
+    #icon img {
+        width: 20vw;
+    }
 }
